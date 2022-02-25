@@ -88,9 +88,10 @@ def find_top_freqs(signal, N, secs, Ts, nb_top_freqs):
 
 def main():
     raw_signal, fs_rate, N, raw_len, Ts = load_signal(
-        "lowPassWhiteNoise500ms(decreasingOutput).wav")
+        "singleSnare2s.wav")
     processed_signal, M, pro_len = process_signal(raw_signal, fs_rate)
     find_top_freqs(processed_signal, M, pro_len, Ts, 5)
+    # plot_signal(raw_signal, N, raw_len, Ts)
     plot_signal(processed_signal, M, pro_len, Ts)
 
 
