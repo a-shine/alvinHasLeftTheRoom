@@ -68,22 +68,45 @@ def plot_signal(signal, N, secs, Ts):
 def find_top_freqs(signal, N, secs, Ts, nb_top_freqs):
     t = np.arange(0, secs, Ts)
     FFT = abs(fftpack.fft(signal))
-    FFT_side = FFT[range(int(N/2))]  # one side FFT range
+    # one side FFT range - remove negative frequencies
+    FFT_side = FFT[range(int(N/2))]
     freqs = fftpack.fftfreq(signal.size, t[1]-t[0])
     freqs_side = freqs[range(int(N/2))]  # one side frequency range
 
     amplitude_freq = {}
 
+    # for the amplitude-frequency graph
     for i in range(len(FFT_side)):
         if FFT_side[i] not in amplitude_freq:
             amplitude_freq[FFT_side[i]] = list()
         amplitude_freq[FFT_side[i]].append(freqs_side[i])
 
-    for i in range(nb_top_freqs):
+    x = 0
+    max_freqs = []
+    while(x < nb_top_freqs):
         max_amp = max(amplitude_freq)
-        print("Max amplitude:", i, ":", max_amp)
-        print("Frequencies:", amplitude_freq[max_amp])
+        # compare all the frequncies with the current maximum amplitude to the ones already found
+        for currFrequencies in amplitude_freq[max_amp]:
+            for i in range(len(max_freqs)):
+                for knownFrequencies in max_freqs[i]:
+                    # if the difference between them is less than  10 remove this current frequency
+                    if(currFrequencies > knownFrequencies-10) and currFrequencies < (knownFrequencies+10):
+                        amplitude_freq[max_amp].remove(currFrequencies)
+        # if there are still valid current frequncies, print them
+        if amplitude_freq[max_amp]:
+            max_freqs.append(amplitude_freq[max_amp])
+            x = x+1
+            print("Max amplitude:", x, ":", max_amp)
+            print("Frequencies:", amplitude_freq[max_amp], "\n")
         del amplitude_freq[max_amp]
+
+    '''
+    for i in range(nb_top_freqs):
+    max_amp = max(amplitude_freq)
+    print("Max amplitude", i, ":", max_amp)
+    print("Frequencies", amplitude_freq[max_amp])
+    del amplitude_freq[max_amp]
+    '''
 
 
 def main():
