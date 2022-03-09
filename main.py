@@ -71,9 +71,9 @@ def plot_signal(signal, N, secs, Ts):
     # Plot frequency domain of processed
     # time vector as scipy arange field / numpy.ndarray
     t = np.arange(0, secs, Ts)
-    FFT = abs(fft(signal))
+    FFT = abs(rfft(signal))
     FFT_side = FFT[range(int(N/2))]  # one side FFT range
-    freqs = fftpack.fftfreq(signal.size, t[1]-t[0])
+    freqs = rfftfreq(signal.size, t[1]-t[0])
     freqs_side = freqs[range(int(N/2))]  # one side frequency range
     plt.subplot(211)
     p1 = plt.plot(t, signal, "g")  # plotting the signal
@@ -183,11 +183,17 @@ def to_dict(freq, amp):
     return freq_dict
 
 
+# def plot_signal():
+#     plt.subplot(211)
+
+#     t = np.arange(0, secs, Ts)
+
+
 def main():
     snippet_len = 0.5
 
     raw_signal, fs_rate, N, raw_len, Ts = load_signal(
-        "singleSnare2s.wav")
+        "maleAr2s.wav")
     processed_signal, M, pro_len = process_signal(raw_signal, fs_rate)
     signal_beg, O = signal_beginning(processed_signal, fs_rate, snippet_len)
     signal_en, P = signal_end(processed_signal, fs_rate, snippet_len)
@@ -210,8 +216,8 @@ def main():
     print(avg_convergence_rate)
 
     # find_top_freqs(processed_signal, M, pro_len, Ts, 5)
-    # # plot_signal(raw_signal, N, raw_len, Ts)
-    # plot_signal(processed_signal, M, pro_len, Ts)
+    # plot_signal(raw_signal, N, raw_len, Ts)
+    plot_signal(processed_signal, M, pro_len, Ts)
     # experiment()
 
 
