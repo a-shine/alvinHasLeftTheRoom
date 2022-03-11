@@ -1,0 +1,642 @@
+File name:  celloC2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  3154682131678.269
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  1367417658518.1987
+Frequency value: [318.0] 
+
+Frequency  3 :
+Max amplitude:  322889928775.87524
+Frequency value: [390.0] 
+
+Frequency  4 :
+Max amplitude:  246390787962.52948
+Frequency value: [2360.0] 
+
+Frequency  5 :
+Max amplitude:  220358734189.53217
+Frequency value: [704.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  56389811370.08099
+Frequency  2  convergence rate:  14307093771.978718
+Frequency  3  convergence rate:  5019995821.866258
+Frequency  4  convergence rate:  4404276940.706528
+Frequency  5  convergence rate:  3929801927.158193
+
+
+
+
+File name:  celloScale2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2032799823919.679
+Frequency value: [444.0] 
+
+Frequency  2 :
+Max amplitude:  855814532618.7924
+Frequency value: [318.0] 
+
+Frequency  3 :
+Max amplitude:  639648696040.1663
+Frequency value: [332.0] 
+
+Frequency  4 :
+Max amplitude:  539324793817.0936
+Frequency value: [694.0] 
+
+Frequency  5 :
+Max amplitude:  449900898022.949
+Frequency value: [250.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  12557578232.17584
+Frequency  2  convergence rate:  603877467.8149328
+Frequency  3  convergence rate:  13076423016.233511
+Frequency  4  convergence rate:  4573709590.687322
+Frequency  5  convergence rate:  475851706.4354423
+
+
+
+
+File name:  femaleAr2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1398277861305.7896
+Frequency value: [648.0] 
+
+Frequency  2 :
+Max amplitude:  473237451845.95135
+Frequency value: [862.0] 
+
+Frequency  3 :
+Max amplitude:  415269618915.2213
+Frequency value: [852.0] 
+
+Frequency  4 :
+Max amplitude:  341960535941.67334
+Frequency value: [658.0] 
+
+Frequency  5 :
+Max amplitude:  328842247183.73157
+Frequency value: [432.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  47785517962.95764
+Frequency  2  convergence rate:  11414429032.283678
+Frequency  3  convergence rate:  11927266715.446716
+Frequency  4  convergence rate:  9552110669.045225
+Frequency  5  convergence rate:  7910655598.295826
+
+
+
+
+File name:  femaleEnglish2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2661455804223.33
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  674000288745.3508
+Frequency value: [318.0] 
+
+Frequency  3 :
+Max amplitude:  630734870832.1465
+Frequency value: [516.0] 
+
+Frequency  4 :
+Max amplitude:  533808411262.4831
+Frequency value: [380.0] 
+
+Frequency  5 :
+Max amplitude:  278809274310.9193
+Frequency value: [2044.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  69247858310.16447
+Frequency  2  convergence rate:  17528890523.480007
+Frequency  3  convergence rate:  1304272144.0385256
+Frequency  4  convergence rate:  13318226036.749752
+Frequency  5  convergence rate:  2493901922.4646525
+
+
+
+
+File name:  femaleEr2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2294480546192.8755
+Frequency value: [212.0] 
+
+Frequency  2 :
+Max amplitude:  1887194987651.132
+Frequency value: [642.0] 
+
+Frequency  3 :
+Max amplitude:  503877295094.5614
+Frequency value: [854.0] 
+
+Frequency  4 :
+Max amplitude:  478046730564.3221
+Frequency value: [694.0] 
+
+Frequency  5 :
+Max amplitude:  259320454673.79752
+Frequency value: [1494.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  36555556097.20753
+Frequency  2  convergence rate:  30137491798.903996
+Frequency  3  convergence rate:  12487045045.67754
+Frequency  4  convergence rate:  13063487301.458166
+Frequency  5  convergence rate:  4467032112.672802
+
+
+
+
+File name:  femaleI2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2180843664436.9805
+Frequency value: [444.0] 
+
+Frequency  2 :
+Max amplitude:  1986094352016.6606
+Frequency value: [454.0] 
+
+Frequency  3 :
+Max amplitude:  863992718521.8679
+Frequency value: [694.0] 
+
+Frequency  4 :
+Max amplitude:  498110716806.9636
+Frequency value: [224.0] 
+
+Frequency  5 :
+Max amplitude:  132280549784.26231
+Frequency value: [464.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  16280960117.095112
+Frequency  2  convergence rate:  46653450468.74323
+Frequency  3  convergence rate:  20404137972.05629
+Frequency  4  convergence rate:  -140385930.5251423
+Frequency  5  convergence rate:  3082051242.41558
+
+
+
+
+File name:  femaleRomanian2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1622487983704.9395
+Frequency value: [444.0] 
+
+Frequency  2 :
+Max amplitude:  1135057386821.5098
+Frequency value: [694.0] 
+
+Frequency  3 :
+Max amplitude:  1034217868175.667
+Frequency value: [194.0] 
+
+Frequency  4 :
+Max amplitude:  686167966288.9789
+Frequency value: [380.0] 
+
+Frequency  5 :
+Max amplitude:  447542010098.92395
+Frequency value: [318.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  21108873778.47396
+Frequency  2  convergence rate:  27132887910.331196
+Frequency  3  convergence rate:  14985697096.23163
+Frequency  4  convergence rate:  3896854590.8249035
+Frequency  5  convergence rate:  10453604474.079344
+
+
+
+
+File name:  femaleU2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  3769331251383.2334
+Frequency value: [444.0] 
+
+Frequency  2 :
+Max amplitude:  1115533513694.2378
+Frequency value: [212.0] 
+
+Frequency  3 :
+Max amplitude:  624653545139.2886
+Frequency value: [652.0] 
+
+Frequency  4 :
+Max amplitude:  442111883171.04346
+Frequency value: [694.0] 
+
+Frequency  5 :
+Max amplitude:  364403889313.971
+Frequency value: [318.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  9454831139.564924
+Frequency  2  convergence rate:  2881643352.554721
+Frequency  3  convergence rate:  12565582241.595493
+Frequency  4  convergence rate:  8965677758.015896
+Frequency  5  convergence rate:  1786308794.0905528
+
+
+
+
+File name:  laughing2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1632768305467.7793
+Frequency value: [696.0] 
+
+Frequency  2 :
+Max amplitude:  1260794565106.6257
+Frequency value: [446.0] 
+
+Frequency  3 :
+Max amplitude:  738919500825.1921
+Frequency value: [780.0] 
+
+Frequency  4 :
+Max amplitude:  514655471362.8916
+Frequency value: [388.0] 
+
+Frequency  5 :
+Max amplitude:  437902491407.9323
+Frequency value: [316.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  14612777381.195986
+Frequency  2  convergence rate:  5666163174.825056
+Frequency  3  convergence rate:  9546931074.506006
+Frequency  4  convergence rate:  10658593101.94811
+Frequency  5  convergence rate:  9057258677.915255
+
+
+
+
+File name:  maleAr2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  3801915361197.685
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  596870070206.3812
+Frequency value: [780.0] 
+
+Frequency  3 :
+Max amplitude:  365479131835.4385
+Frequency value: [590.0] 
+
+Frequency  4 :
+Max amplitude:  189283467212.02896
+Frequency value: [704.0] 
+
+Frequency  5 :
+Max amplitude:  177714077285.03577
+Frequency value: [390.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  48653923280.96729
+Frequency  2  convergence rate:  10910000833.045439
+Frequency  3  convergence rate:  9042008804.529226
+Frequency  4  convergence rate:  3290177713.9597187
+Frequency  5  convergence rate:  4268256303.468888
+
+
+
+
+File name:  maleEnglish2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1927883083506.5645
+Frequency value: [444.0] 
+
+Frequency  2 :
+Max amplitude:  1073871963863.1863
+Frequency value: [694.0] 
+
+Frequency  3 :
+Max amplitude:  842746808466.4729
+Frequency value: [254.0] 
+
+Frequency  4 :
+Max amplitude:  681789432736.4346
+Frequency value: [2360.0] 
+
+Frequency  5 :
+Max amplitude:  407207895703.98975
+Frequency value: [454.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  5645514336.252915
+Frequency  2  convergence rate:  23131485591.98814
+Frequency  3  convergence rate:  19039151884.114906
+Frequency  4  convergence rate:  15423378032.506365
+Frequency  5  convergence rate:  5543497193.837881
+
+
+
+
+File name:  maleEr2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2503332920207.1836
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  503377213265.51196
+Frequency value: [2360.0] 
+
+Frequency  3 :
+Max amplitude:  438519349169.4552
+Frequency value: [194.0] 
+
+Frequency  4 :
+Max amplitude:  337169271156.7511
+Frequency value: [516.0] 
+
+Frequency  5 :
+Max amplitude:  309889363591.96576
+Frequency value: [478.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  44003646291.321915
+Frequency  2  convergence rate:  7707690229.545893
+Frequency  3  convergence rate:  3233591937.8891697
+Frequency  4  convergence rate:  2027231550.6234164
+Frequency  5  convergence rate:  4986441261.530962
+
+
+
+
+File name:  maleFrench2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2496548642964.0283
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  676039790946.6307
+Frequency value: [254.0] 
+
+Frequency  3 :
+Max amplitude:  461006245746.6112
+Frequency value: [318.0] 
+
+Frequency  4 :
+Max amplitude:  245992067530.22052
+Frequency value: [444.0] 
+
+Frequency  5 :
+Max amplitude:  238249584160.81705
+Frequency value: [742.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  56473901005.47118
+Frequency  2  convergence rate:  200316667.93591934
+Frequency  3  convergence rate:  10344700185.911474
+Frequency  4  convergence rate:  5525122837.367822
+Frequency  5  convergence rate:  5335075647.398308
+
+
+
+
+File name:  maleI2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1762655472853.0405
+Frequency value: [2044.0] 
+
+Frequency  2 :
+Max amplitude:  1511537125624.275
+Frequency value: [3162.0] 
+
+Frequency  3 :
+Max amplitude:  789771587794.771
+Frequency value: [694.0] 
+
+Frequency  4 :
+Max amplitude:  478330097052.7919
+Frequency value: [254.0] 
+
+Frequency  5 :
+Max amplitude:  434432312333.2581
+Frequency value: [516.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  23651352504.147144
+Frequency  2  convergence rate:  9768498223.804665
+Frequency  3  convergence rate:  13231158212.615675
+Frequency  4  convergence rate:  7986840162.74512
+Frequency  5  convergence rate:  5067395010.553074
+
+
+
+
+File name:  maleU2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  2089966627942.2383
+Frequency value: [694.0] 
+
+Frequency  2 :
+Max amplitude:  1563463478945.2334
+Frequency value: [444.0] 
+
+Frequency  3 :
+Max amplitude:  887741032523.0723
+Frequency value: [318.0] 
+
+Frequency  4 :
+Max amplitude:  407145133899.23376
+Frequency value: [332.0] 
+
+Frequency  5 :
+Max amplitude:  364404518980.28265
+Frequency value: [516.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  21396974250.226322
+Frequency  2  convergence rate:  9934299510.924437
+Frequency  3  convergence rate:  14008466429.727608
+Frequency  4  convergence rate:  6321077669.199395
+Frequency  5  convergence rate:  3127622369.0419846
+
+
+
+
+File name:  snareRythm2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1002334118867.2751
+Frequency value: [3128.0] 
+
+Frequency  2 :
+Max amplitude:  903012526779.2388
+Frequency value: [3490.0] 
+
+Frequency  3 :
+Max amplitude:  640078193395.845
+Frequency value: [3138.0] 
+
+Frequency  4 :
+Max amplitude:  386978880781.22284
+Frequency value: [270.0] 
+
+Frequency  5 :
+Max amplitude:  319971957312.67725
+Frequency value: [172.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  35566681811.65003
+Frequency  2  convergence rate:  15340130470.51906
+Frequency  3  convergence rate:  22631211054.17626
+Frequency  4  convergence rate:  2162226033.875404
+Frequency  5  convergence rate:  203143940.00808546
+
+
+
+
+File name:  snareSingle2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  641553896452.6489
+Frequency value: [398.0] 
+
+Frequency  2 :
+Max amplitude:  490830978390.1188
+Frequency value: [734.0] 
+
+Frequency  3 :
+Max amplitude:  455921666306.5923
+Frequency value: [352.0] 
+
+Frequency  4 :
+Max amplitude:  345271878459.5404
+Frequency value: [192.0] 
+
+Frequency  5 :
+Max amplitude:  337520303841.4644
+Frequency value: [378.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  19245780425.047565
+Frequency  2  convergence rate:  4445403836.435026
+Frequency  3  convergence rate:  4665934842.311237
+Frequency  4  convergence rate:  11664262349.630281
+Frequency  5  convergence rate:  4095204633.5448623
+
+
+
+
+File name:  whiteNoiseHighPass2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  662034009061.7814
+Frequency value: [3862.0] 
+
+Frequency  2 :
+Max amplitude:  521156715855.2855
+Frequency value: [4024.0] 
+
+Frequency  3 :
+Max amplitude:  494255157791.2401
+Frequency value: [2812.0] 
+
+Frequency  4 :
+Max amplitude:  487501786701.69824
+Frequency value: [4162.0] 
+
+Frequency  5 :
+Max amplitude:  487202667589.73334
+Frequency value: [6394.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  816671676.9565951
+Frequency  2  convergence rate:  2108944096.225355
+Frequency  3  convergence rate:  1585577356.5859232
+Frequency  4  convergence rate:  8867845354.792805
+Frequency  5  convergence rate:  948443430.4727112
+
+
+
+
+File name:  whiteNoiseLowPass2s.wav 
+
+Frequencies with maximum amplitude: 
+
+Frequency  1 :
+Max amplitude:  1411916188708.63
+Frequency value: [398.0] 
+
+Frequency  2 :
+Max amplitude:  722331207607.2422
+Frequency value: [352.0] 
+
+Frequency  3 :
+Max amplitude:  542034418604.6189
+Frequency value: [1882.0] 
+
+Frequency  4 :
+Max amplitude:  454129345585.2247
+Frequency value: [598.0] 
+
+Frequency  5 :
+Max amplitude:  421641142650.2167
+Frequency value: [278.0] 
+
+Average convergence rate for max amplitude frequencies:
+Frequency  1  convergence rate:  3728278530.662746
+Frequency  2  convergence rate:  18686682661.368893
+Frequency  3  convergence rate:  14084453774.883877
+Frequency  4  convergence rate:  11535366516.105
+Frequency  5  convergence rate:  10611525704.473064

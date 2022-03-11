@@ -1,7 +1,9 @@
+from multiprocessing.sharedctypes import Value
 from scipy.fftpack import rfft, rfftfreq
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
 
 
 def to_mono(signal):
@@ -14,19 +16,19 @@ def to_mono(signal):
 def load_signal(file_name):
     fs_rate, signal = wavfile.read(file_name)
 
-    print("Sample rate/frequency:", fs_rate)
+    #print("Sample rate/frequency:", fs_rate)
 
     channels = signal.shape[1]
-    print("Number of channels:", channels)
+    #print("Number of channels:", channels)
 
     N = signal.shape[0]
-    print("Number of samples:", N)
+    #print("Number of samples:", N)
 
     secs = N / float(fs_rate)
-    print("Length in seconds:", secs)
+    #print("Length in seconds:", secs)
 
     Ts = 1.0/fs_rate  # sampling interval in time
-    print("Timestep between samples Ts", Ts)
+    #print("Timestep between samples Ts", Ts)
 
     return signal, fs_rate, N, secs, Ts
 
@@ -41,7 +43,7 @@ def process_signal(signal, fs_rate):
     nmin = min(signal)
     for i in range(len(signal)):
         if signal[i] == nmax or signal[i] == nmin:
-            print("clipping at", i)
+            #print("clipping at", i)
             signal = signal[:i]
             break
     N = signal.shape[0]
@@ -101,18 +103,24 @@ def find_strongest_freqs(amplitudes, frequencies, nb_top_freqs):
     while(x < nb_top_freqs):
         max_amp = max(amplitude_freqs)
         # compare all the frequncies with the current maximum amplitude to the ones already found
+        deleteItems=[]
         for currFrequencies in amplitude_freqs[max_amp]:
             for i in range(len(max_freqs)):
                 for knownFrequencies in max_freqs[i]:
                     # if the difference between them is less than  10 remove this current frequency
                     if(currFrequencies > knownFrequencies-10) and currFrequencies < (knownFrequencies+10):
-                        amplitude_freqs[max_amp].remove(currFrequencies)
+                        #amplitude_freqs[max_amp].remove(currFrequencies)
+                        deleteItems.append(currFrequencies)
+        for i in range(len(deleteItems)):
+            # if freq is not in delete items, we keep it
+            amplitude_freqs[max_amp] = [freq for freq in  amplitude_freqs[max_amp] if freq not in deleteItems]
         # if there are still valid current frequncies, print them
         if amplitude_freqs[max_amp]:
             max_freqs.append(amplitude_freqs[max_amp])
             x = x+1
-            print("Max amplitude:", x, ":", max_amp)
-            print("Frequencies:", amplitude_freqs[max_amp], "\n")
+            print("Frequency ", x, ":")
+            print("Max amplitude: ", max_amp)
+            print("Frequency value:", amplitude_freqs[max_amp], "\n")
         del amplitude_freqs[max_amp]
     return max_freqs
 
@@ -149,8 +157,7 @@ def get_avg_rate(signal, frequency, fs_rate, secs):
 
 
 def experiment():
-    raw_signal, fs_rate, M, raw_len, Ts = load_signal(
-        "maleAr2s.wav")
+    raw_signal, fs_rate, M, raw_len, Ts = load_signal(sys.argv[1])
     processed_signal, N, pro_len = process_signal(raw_signal, fs_rate)
     start_len = 0.5
     start_signal, O = signal_beginning(raw_signal, fs_rate, start_len)
@@ -192,33 +199,40 @@ def to_dict(freq, amp):
 def main():
     snippet_len = 0.5
 
-    raw_signal, fs_rate, N, raw_len, Ts = load_signal(
-        "maleAr2s.wav")
+    print("File name: ", sys.argv[1], "\n")
+    print("Frequencies with maximum amplitude:", "\n")
+
+    raw_signal, fs_rate, N, raw_len, Ts = load_signal(sys.argv[1])
+
+    # Cuts the signal when it clips to prevent artifacts from distorting the
+    # fourier transform
     processed_signal, M, pro_len = process_signal(raw_signal, fs_rate)
+    
+    # if O and P are the same - then rfftfreq(signal.size,
+    # d=1./sample_rate) outputs the same values as so we can use the dictionary
     signal_beg, O = signal_beginning(processed_signal, fs_rate, snippet_len)
     signal_en, P = signal_end(processed_signal, fs_rate, snippet_len)
 
-    print(O)
-    print(P)
+    beg_sig_amps, beg_sig_freqs = frequency_domain(signal_beg, fs_rate)
+    end_sig_amps, end_sig_freqs = frequency_domain(signal_en, fs_rate)
 
-    # TODO: if O and P are the same - then rfftfreq(signal.size,
-    # d=1./sample_rate) outputs the same values as so we can use the dictionary
+    beg = to_dict(beg_sig_freqs, beg_sig_amps)
+    full = to_dict(end_sig_freqs, end_sig_amps)
+    
+    # Get the list of 5 most prominent frequencies after the orginal signal has
+    # resoin the room
+    top_freqs = find_strongest_freqs(end_sig_amps, end_sig_freqs, 5)
 
-    amplitudes, freqs = frequency_domain(signal_en, fs_rate)
-    full = to_dict(freqs, amplitudes)
-    top_freqs = find_strongest_freqs(amplitudes, freqs, 5)
-
-    amplitudes, freqs = frequency_domain(signal_beg, fs_rate)
-    beg = to_dict(freqs, amplitudes)
-
-    avg_convergence_rate = full[top_freqs[0][0]] - beg[top_freqs[0][0]]/pro_len
-
-    print(avg_convergence_rate)
+    print("Average convergence rate for max amplitude frequencies:")
+    for i in range(len(top_freqs)):
+        avg_convergence_rate = (full[top_freqs[i][0]] - beg[top_freqs[i][0]])/pro_len
+        print("Frequency ", i+1, " convergence rate: ", avg_convergence_rate)
 
     # find_top_freqs(processed_signal, M, pro_len, Ts, 5)
     # plot_signal(raw_signal, N, raw_len, Ts)
-    plot_signal(processed_signal, M, pro_len, Ts)
+    # plot_signal(processed_signal, M, pro_len, Ts)
     # experiment()
+    print("\n\n\n")
 
 
 if __name__ == "__main__":
