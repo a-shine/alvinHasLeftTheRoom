@@ -7,18 +7,51 @@ import sys
 
 
 def to_mono(signal):
-    channels = signal.shape[1]
+    """
+    Convert a stereo signal to mono.
+
+    Args:
+        signal (numpy.array): signal to convert (either mono or stereo)
+
+    Returns:
+        numpy.array: mono signal
+    """
+    channels = 1
+    try:
+        channels = signal.shape[1]
+    except IndexError:
+        pass
+
     if channels == 2:
         signal = signal.sum(axis=1) / 2
+
     return signal
 
 
 def load_signal(file_name):
+    """
+    Load a wav file and return the signal and the sample rate
+
+    Args:
+        file_name (string): path of the wav file
+
+    Returns:
+        signal (numpy.array): the signal loaded into memory
+        sample_rate (int): the sample rate of the signal
+        N (int): the number of samples in the signal
+        secs (float): the duration of the signal in seconds
+        Ts (float): the duration of a sample in seconds
+    """
     fs_rate, signal = wavfile.read(file_name)
 
     #print("Sample rate/frequency:", fs_rate)
 
-    channels = signal.shape[1]
+    channels = 1
+    try:
+        channels = signal.shape[1]
+    except IndexError:
+        pass
+
     #print("Number of channels:", channels)
 
     N = signal.shape[0]
@@ -103,17 +136,18 @@ def find_strongest_freqs(amplitudes, frequencies, nb_top_freqs):
     while(x < nb_top_freqs):
         max_amp = max(amplitude_freqs)
         # compare all the frequncies with the current maximum amplitude to the ones already found
-        deleteItems=[]
+        deleteItems = []
         for currFrequencies in amplitude_freqs[max_amp]:
             for i in range(len(max_freqs)):
                 for knownFrequencies in max_freqs[i]:
                     # if the difference between them is less than  10 remove this current frequency
                     if(currFrequencies > knownFrequencies-10) and currFrequencies < (knownFrequencies+10):
-                        #amplitude_freqs[max_amp].remove(currFrequencies)
+                        # amplitude_freqs[max_amp].remove(currFrequencies)
                         deleteItems.append(currFrequencies)
         for i in range(len(deleteItems)):
             # if freq is not in delete items, we keep it
-            amplitude_freqs[max_amp] = [freq for freq in  amplitude_freqs[max_amp] if freq not in deleteItems]
+            amplitude_freqs[max_amp] = [
+                freq for freq in amplitude_freqs[max_amp] if freq not in deleteItems]
         # if there are still valid current frequncies, print them
         if amplitude_freqs[max_amp]:
             max_freqs.append(amplitude_freqs[max_amp])
@@ -195,6 +229,24 @@ def to_dict(freq, amp):
 
 #     t = np.arange(0, secs, Ts)
 
+def plot_sig(signal, fs_rate):
+    signal = to_mono(signal)
+
+    plt.subplot(211)
+
+    secs = signal.shape[0] / float(fs_rate)
+    Ts = 1.0/fs_rate  # sampling interval in time
+
+    t = np.arange(0, secs, Ts)
+
+    plt.plot(t, signal)
+
+    amp, freq = frequency_domain(signal, fs_rate)
+    plt.subplot(212)
+    plt.plot(freq, amp)
+
+    plt.show()
+
 
 def main():
     snippet_len = 0.5
@@ -207,25 +259,28 @@ def main():
     # Cuts the signal when it clips to prevent artifacts from distorting the
     # fourier transform
     processed_signal, M, pro_len = process_signal(raw_signal, fs_rate)
-    
+
     # if O and P are the same - then rfftfreq(signal.size,
     # d=1./sample_rate) outputs the same values as so we can use the dictionary
     signal_beg, O = signal_beginning(processed_signal, fs_rate, snippet_len)
+
     signal_en, P = signal_end(processed_signal, fs_rate, snippet_len)
+    plot_sig(signal_en, fs_rate)
 
     beg_sig_amps, beg_sig_freqs = frequency_domain(signal_beg, fs_rate)
     end_sig_amps, end_sig_freqs = frequency_domain(signal_en, fs_rate)
 
     beg = to_dict(beg_sig_freqs, beg_sig_amps)
     full = to_dict(end_sig_freqs, end_sig_amps)
-    
+
     # Get the list of 5 most prominent frequencies after the orginal signal has
     # resoin the room
     top_freqs = find_strongest_freqs(end_sig_amps, end_sig_freqs, 5)
 
     print("Average convergence rate for max amplitude frequencies:")
     for i in range(len(top_freqs)):
-        avg_convergence_rate = (full[top_freqs[i][0]] - beg[top_freqs[i][0]])/pro_len
+        avg_convergence_rate = (
+            full[top_freqs[i][0]] - beg[top_freqs[i][0]])/pro_len
         print("Frequency ", i+1, " convergence rate: ", avg_convergence_rate)
 
     # find_top_freqs(processed_signal, M, pro_len, Ts, 5)
